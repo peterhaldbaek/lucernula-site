@@ -1,0 +1,82 @@
+/* The Lucernula pages: the app's greys and a book face, no web fonts, light and dark. */
+:root {
+  --ground: #f2f2f2;
+  --card: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #595959;
+  --rule: #dcdcdc;
+  --accent: #1f3a5f;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #1c1c1c;
+    --card: #262626;
+    --ink: #ededed;
+    --muted: #a6a6a6;
+    --rule: #3a3a3a;
+    --accent: #9fb7d6;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+header { margin-bottom: 2.5rem; }
+
+.app {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.4rem; margin: 0.3rem 0 0.5rem; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 0.5rem; }
+
+.lede { color: var(--muted); font-size: 1.1rem; margin: 0; }
+
+a { color: var(--accent); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.card p { margin: 0.3rem 0; }
+
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer a { margin-right: 1rem; }
